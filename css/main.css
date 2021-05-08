@@ -1,0 +1,193 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button-basic, header .header-content .form-control button, header nav .btn-signin {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: #e50914;
+  transition: background-color 0.3s;
+}
+.button-basic:hover, header .header-content .form-control button:hover, header nav .btn-signin:hover {
+  background-color: #b40710;
+}
+
+.basic-h1, header .header-content h1 {
+  font-size: clamp(1.2rem, 3vw, 3.125rem);
+  width: 80%;
+  margin: 0 auto;
+}
+@media (min-width: 800px) {
+  .basic-h1, header .header-content h1 {
+    width: 40rem;
+  }
+}
+
+.basic-h2, header .header-content h2 {
+  margin: 1rem auto;
+  width: 80%;
+  font-size: clamp(1rem, 2vw, 1.625rem);
+  font-weight: 400;
+}
+@media (min-width: 800px) {
+  .basic-h2, header .header-content h2 {
+    width: 40rem;
+  }
+}
+
+header {
+  background: rgba(0, 0, 0, 0.68);
+  background-image: url("../image/netflexLandingPage.jpg");
+  background-blend-mode: overlay;
+  box-shadow: inset 100px 100px 250px #000, inset -100px -100px 250px #000;
+  height: 93vh;
+  border-bottom: 8px solid #222;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 5%;
+}
+header nav .logo-container {
+  height: 6rem;
+}
+header nav .logo-container img {
+  height: 100%;
+}
+header nav .btn-signin {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: auto 0;
+}
+header .header-content {
+  width: 100%;
+  text-align: center;
+  margin-top: 15%;
+}
+header .header-content h3 {
+  padding-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 90%;
+  margin: 0 auto;
+}
+header .header-content .form-control {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  height: 60px;
+}
+@media (min-width: 800px) {
+  header .header-content .form-control {
+    flex-direction: row;
+    width: 40rem;
+  }
+}
+header .header-content .form-control input {
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+}
+@media (min-width: 800px) {
+  header .header-content .form-control input {
+    width: 70%;
+  }
+}
+header .header-content .form-control button {
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+@media (min-width: 948px) {
+  header .header-content .form-control button {
+    width: 30%;
+    margin: 0;
+  }
+}
+
+.main .section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: 8px solid #222;
+  position: relative;
+  justify-content: space-between;
+}
+@media (min-width: 948px) {
+  .main .section {
+    flex-direction: row;
+    padding: 0 8rem;
+  }
+}
+.main .section h1 {
+  margin: 1rem auto;
+  font-size: clamp(1.2rem, 3vw, 3.125rem);
+  font-weight: 400;
+}
+.main .section h2 {
+  margin: 1rem auto;
+  font-size: clamp(1rem, 2vw, 1.625rem);
+  font-weight: 400;
+}
+.main .section .content {
+  width: 80%;
+  text-align: center;
+}
+@media (min-width: 948px) {
+  .main .section .content {
+    width: 48%;
+    text-align: left;
+  }
+}
+.main .section .video-section {
+  width: 48%;
+}
+.main .section .video-section .section-1-image {
+  position: relative;
+  overflow: hidden;
+}
+.main .section .video-section .section-1-image img {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.main .section .video-section .section-1-image video {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.main #section-2 {
+  flex-direction: column-reverse;
+}
+@media (min-width: 948px) {
+  .main #section-2 {
+    flex-direction: row;
+  }
+}
+.main #section-4 {
+  flex-direction: column-reverse;
+}
+@media (min-width: 948px) {
+  .main #section-4 {
+    flex-direction: row;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

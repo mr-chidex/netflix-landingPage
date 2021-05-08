@@ -1,0 +1,223 @@
+$primary-color: #e50914;
+$white: #fff;
+$black: #000;
+$border: 8px solid #222;
+$font-weight: 400;
+$h1-font-size: clamp(1.2rem, 3vw, 3.125rem);
+$h2-font-size: clamp(1rem, 2vw, 1.625rem);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $black;
+  color: $white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button-basic {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: $white;
+  background-color: $primary-color;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.basic-h1 {
+  font-size: $h1-font-size;
+  width: 80%;
+  margin: 0 auto;
+
+  @media (min-width: 800px) {
+    width: 40rem;
+  }
+}
+
+.basic-h2 {
+  margin: 1rem auto;
+  width: 80%;
+  font-size: $h2-font-size;
+  font-weight: $font-weight;
+
+  @media (min-width: 800px) {
+    width: 40rem;
+  }
+}
+
+header {
+  //   padding: 0 3.5rem;
+  background: rgba(0, 0, 0, 0.68);
+  background-image: url("../image/netflexLandingPage.jpg");
+  background-blend-mode: overlay;
+  box-shadow: inset 100px 100px 250px $black, inset -100px -100px 250px $black;
+  height: 93vh;
+  border-bottom: $border;
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 5%;
+
+    .logo-container {
+      height: 6rem;
+      img {
+        height: 100%;
+      }
+    }
+
+    .btn-signin {
+      @extend .button-basic;
+      display: block;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: $font-weight;
+      margin: auto 0;
+    }
+  }
+
+  .header-content {
+    width: 100%;
+    text-align: center;
+    margin-top: 15%;
+
+    h1 {
+      @extend .basic-h1;
+    }
+
+    h2 {
+      @extend .basic-h2;
+    }
+
+    h3 {
+      padding-bottom: 20px;
+      font-size: 1.2rem;
+      font-weight: $font-weight;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .form-control {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin: 0 auto;
+      height: 60px;
+
+      @media (min-width: 800px) {
+        flex-direction: row;
+        width: 40rem;
+      }
+
+      input {
+        width: 100%;
+        padding: 1rem;
+        outline: none;
+
+        @media (min-width: 800px) {
+          width: 70%;
+        }
+      }
+
+      button {
+        font-size: 1.2rem;
+        @extend .button-basic;
+        padding: 1rem;
+        margin: 1rem auto;
+
+        @media (min-width: 948px) {
+          width: 30%;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  .section {
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: $border;
+
+    position: relative;
+    // max-width: 1100px;
+    justify-content: space-between;
+
+    @media (min-width: 948px) {
+      flex-direction: row;
+      padding: 0 8rem;
+    }
+
+    h1 {
+      margin: 1rem auto;
+      font-size: $h1-font-size;
+      font-weight: $font-weight;
+    }
+
+    h2 {
+      margin: 1rem auto;
+      font-size: $h2-font-size;
+      font-weight: $font-weight;
+    }
+
+    .content {
+      width: 80%;
+      text-align: center;
+
+      @media (min-width: 948px) {
+        width: 48%;
+        text-align: left;
+      }
+    }
+
+    .video-section {
+      width: 48%;
+
+      .section-1-image {
+        position: relative;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          position: relative;
+          z-index: 2;
+        }
+
+        video {
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+
+  #section-2 {
+    flex-direction: column-reverse;
+    @media (min-width: 948px) {
+      flex-direction: row;
+    }
+  }
+
+  #section-4 {
+    flex-direction: column-reverse;
+    @media (min-width: 948px) {
+      flex-direction: row;
+    }
+  }
+}
