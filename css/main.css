@@ -120,7 +120,7 @@ header .header-content .form-control button {
   }
 }
 
-.main .section {
+.section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,64 +130,110 @@ header .header-content .form-control button {
   justify-content: space-between;
 }
 @media (min-width: 948px) {
-  .main .section {
+  .section {
     flex-direction: row;
     padding: 0 8rem;
   }
 }
-.main .section h1 {
+.section h1 {
   margin: 1rem auto;
   font-size: clamp(1.2rem, 3vw, 3.125rem);
   font-weight: 400;
 }
-.main .section h2 {
+.section h2 {
   margin: 1rem auto;
   font-size: clamp(1rem, 2vw, 1.625rem);
   font-weight: 400;
 }
-.main .section .content {
+.section .content {
   width: 80%;
   text-align: center;
 }
 @media (min-width: 948px) {
-  .main .section .content {
+  .section .content {
     width: 48%;
     text-align: left;
   }
 }
-.main .section .video-section {
+.section .video-section {
   width: 48%;
 }
-.main .section .video-section .section-1-image {
+.section .video-section .section-1-image {
   position: relative;
   overflow: hidden;
 }
-.main .section .video-section .section-1-image img {
+.section .video-section .section-1-image img {
   width: 100%;
   position: relative;
   z-index: 2;
 }
-.main .section .video-section .section-1-image video {
+.section .video-section .section-1-image video {
   width: 100%;
   position: absolute;
   left: 0;
   top: 0;
 }
-.main #section-2 {
+
+#section-3 video {
+  width: 60%;
+  left: 18%;
+  top: 12%;
+}
+
+#section-2 {
   flex-direction: column-reverse;
 }
 @media (min-width: 948px) {
-  .main #section-2 {
+  #section-2 {
     flex-direction: row;
   }
 }
-.main #section-4 {
+
+#section-4 {
   flex-direction: column-reverse;
 }
 @media (min-width: 948px) {
-  .main #section-4 {
+  #section-4 {
     flex-direction: row;
   }
+}
+
+footer {
+  width: 90%;
+  margin: 3rem auto;
+}
+footer h4 {
+  color: #777777;
+  padding: 1rem 0 2rem;
+  font-weight: 400;
+}
+footer .link-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+footer .link-items .link-item {
+  display: inline-block;
+  min-width: 100px;
+  width: 45%;
+  margin-bottom: 1rem;
+}
+@media (min-width: 948px) {
+  footer .link-items .link-item {
+    width: 25%;
+  }
+}
+footer .link-items .link-item a {
+  color: #757575;
+  text-decoration: none;
+}
+footer .link-items .link-item a:hover {
+  text-decoration: underline;
+}
+footer .designer,
+footer .designer a {
+  color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */
