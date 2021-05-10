@@ -140,12 +140,13 @@ header .header-content .form-control button {
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  border-bottom: 8px solid #222;
   position: relative;
   justify-content: space-between;
+  margin: 0 auto;
 }
 @media (min-width: 948px) {
   .section {
+    max-width: 1400px;
     flex-direction: row;
     padding: 0 8rem;
   }
@@ -194,6 +195,13 @@ header .header-content .form-control button {
   top: 0;
 }
 
+.ruler {
+  height: 8px;
+  background-color: #222;
+  width: 100%;
+  border: none;
+}
+
 #section-3 video {
   width: 60%;
   left: 18%;
@@ -219,8 +227,13 @@ header .header-content .form-control button {
 }
 
 footer {
-  width: 90%;
   margin: 3rem auto;
+  width: 80%;
+}
+@media (min-width: 800px) {
+  footer {
+    max-width: 1200px;
+  }
 }
 footer h4 {
   color: #777777;
