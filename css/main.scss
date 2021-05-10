@@ -3,7 +3,7 @@ $white: #fff;
 $black: #000;
 $border: 8px solid #222;
 $font-weight: 400;
-$h1-font-size: clamp(1.2rem, 3vw, 3.125rem);
+$h1-font-size: clamp(1.5rem, 3vw, 3.125rem);
 $h2-font-size: clamp(1rem, 2vw, 1.625rem);
 
 * {
@@ -57,8 +57,12 @@ header {
   background-image: url("../image/netflexLandingPage.jpg");
   background-blend-mode: overlay;
   box-shadow: inset 100px 100px 250px $black, inset -100px -100px 250px $black;
-  height: 93vh;
+  height: 72vh;
   border-bottom: $border;
+
+  @media (min-width: 800px) {
+    height: 93vh;
+  }
 
   nav {
     display: flex;
@@ -67,20 +71,28 @@ header {
     margin: 0 5%;
 
     .logo-container {
-      height: 6rem;
+      height: 4rem;
       img {
         height: 100%;
+      }
+
+      @media (min-width: 800px) {
+        height: 6rem;
       }
     }
 
     .btn-signin {
       @extend .button-basic;
       display: block;
-      padding: 0.5rem 1rem;
+      padding: 0.3rem 0.8rem;
       border-radius: 5px;
       font-size: 1rem;
       font-weight: $font-weight;
       margin: auto 0;
+
+      @media (min-width: 800px) {
+        padding: 0.5rem 1rem;
+      }
     }
   }
 
@@ -179,7 +191,11 @@ header {
   }
 
   .video-section {
-    width: 48%;
+    width: 100%;
+
+    @media (min-width: 800px) {
+      width: 48%;
+    }
 
     .section-1-image {
       position: relative;
